@@ -100,15 +100,15 @@ CGFloat SVProgressHUDRingThickness = 6;
     [[SVProgressHUD sharedView] showProgress:-1 status:status maskType:maskType];
 }
 
-+ (void)showProgress:(CGFloat)progress {
++ (void)showProgress:(float)progress {
     [[SVProgressHUD sharedView] showProgress:progress status:nil maskType:SVProgressHUDMaskTypeNone];
 }
 
-+ (void)showProgress:(CGFloat)progress status:(NSString *)status {
++ (void)showProgress:(float)progress status:(NSString *)status {
     [[SVProgressHUD sharedView] showProgress:progress status:status maskType:SVProgressHUDMaskTypeNone];
 }
 
-+ (void)showProgress:(CGFloat)progress status:(NSString *)status maskType:(SVProgressHUDMaskType)maskType {
++ (void)showProgress:(float)progress status:(NSString *)status maskType:(SVProgressHUDMaskType)maskType {
     [[SVProgressHUD sharedView] showProgress:progress status:status maskType:maskType];
 }
 
