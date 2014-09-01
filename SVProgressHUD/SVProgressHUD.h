@@ -48,10 +48,7 @@ typedef NSUInteger SVProgressHUDMaskType;
 + (void)showProgress:(float)progress;
 + (void)showProgress:(float)progress status:(NSString*)status;
 + (void)showProgress:(float)progress status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
 + (void)setStatus:(NSString*)string; // change the HUD loading status while it's showing
 
 // stops the activity indicator, shows a glyph + status, and dismisses HUD 1s later
