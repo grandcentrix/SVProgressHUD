@@ -282,7 +282,11 @@ static const CGFloat SVProgressHUDParallaxDepthPoints = 10;
                                          attributes:@{NSFontAttributeName: self.stringLabel.font}
                                             context:NULL];
         } else {
-          CGSize stringSize = [string sizeWithFont:self.stringLabel.font constrainedToSize:CGSizeMake(200, 300)];
+          CGSize stringSize = [string boundingRectWithSize:CGSizeMake(200, 300)
+                                                   options:NSStringDrawingUsesLineFragmentOrigin
+                                                attributes:@{NSFontAttributeName:self.stringLabel.font}
+                                                   context:nil].size;
+            
           stringRect = CGRectMake(0.0f, 0.0f, stringSize.width, stringSize.height);
         }
         stringWidth = stringRect.size.width;
